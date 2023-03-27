@@ -7,7 +7,7 @@ internal class Program
         
 
         ValidatePinCode validatePinCode = new ValidatePinCode();
-        validatePinCode.Validation("A422004"); //uc1,uc2
+        validatePinCode.Validation("422 004"); //uc1,uc2
 
 
     }
