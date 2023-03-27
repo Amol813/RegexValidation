@@ -7,7 +7,9 @@ internal class Program
         
 
         ValidatePinCode validatePinCode = new ValidatePinCode();
-        validatePinCode.Validation("422 004"); //uc1,uc2
+        validatePinCode.Validate("422 004",ValidatePinCode.PIN_CODE); //uc1,uc2
+
+        validatePinCode.ValidateEmail("abc@gmail.com");
 
 
     }

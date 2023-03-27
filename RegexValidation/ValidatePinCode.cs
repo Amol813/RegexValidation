@@ -5,12 +5,14 @@ namespace RegexValidation
 {
     public class ValidatePinCode
     {
-        public void Validation(string pincode)
+        public const string PIN_CODE = "^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$";
+
+        public void Validate(string input, string regexPattern)
         {
-            Regex regex = new Regex(@"^\d{3}(?:-?\d{3})?");
+           
+            Regex regex = new Regex(regexPattern);
 
-
-            if (regex.IsMatch(pincode))
+            if (regex.IsMatch(input))
             {
                 Console.WriteLine("Validation successful.");
             }
@@ -18,6 +20,13 @@ namespace RegexValidation
             {
                 Console.WriteLine("Validation unsuccessful.");
             }
+        }
+
+        public void ValidateEmail(string email)
+        {
+            const string emailRegex = @"^[a-z]+[@]{1}[a-z]$";
+
+            Validate(email, emailRegex);
         }
     }
 }
